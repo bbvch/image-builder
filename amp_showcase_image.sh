@@ -65,3 +65,6 @@ wfile="${amp_showcase}-4gb" ; archive_img
 __EOF__
 
 chmod +x ${DIR}/deploy/gift_wrap_final_images.sh
+
+cd ${DIR}/deploy
+./gift_wrap_final_images.sh
