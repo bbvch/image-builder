@@ -681,6 +681,9 @@ cat > "${DIR}/chroot_script.sh" <<-__EOF__
 				sed -i -e 's:#Banner:Banner:g' /etc/ssh/sshd_config
 			fi
 		fi
+
+		ln -fs /usr/share/zoneinfo/Europe/Zurich /etc/localtime
+		dpkg-reconfigure -f noninteractive tzdata
 	}
 
 	set_locale () {
