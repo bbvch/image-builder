@@ -510,6 +510,12 @@ if [ -d "${tempdir}/usr/share/initramfs-tools/hooks/" ] ; then
 		sudo chmod +x "${tempdir}/usr/share/initramfs-tools/hooks/dtbo"
 		sudo chown root:root "${tempdir}/usr/share/initramfs-tools/hooks/dtbo"
 	fi
+	if [ ! -f "${tempdir}/usr/share/initramfs-tools/hooks/pru-fw" ] ; then
+		echo "log: adding: [initramfs-tools hook: pru-fw]"
+		sudo cp "${OIB_DIR}/target/other/pru-fw" "${tempdir}/usr/share/initramfs-tools/hooks/"
+		sudo chmod +x "${tempdir}/usr/share/initramfs-tools/hooks/pru-fw"
+		sudo chown root:root "${tempdir}/usr/share/initramfs-tools/hooks/pru-fw"
+	fi
 fi
 
 #Backward compatibility, as setup_sdcard.sh expects [lsb_release -si > /etc/rcn-ee.conf]
