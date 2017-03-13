@@ -257,15 +257,15 @@ install_git_repos () {
 		fi
 	fi
 
-	git_repo="https://github.com/RobertCNelson/dtb-rebuilder.git"
-	git_target_dir="/opt/source/dtb-4.4-ti"
-	git_branch="4.4-ti"
-	git_clone_branch
+	#git_repo="https://github.com/RobertCNelson/dtb-rebuilder.git"
+	#git_target_dir="/opt/source/dtb-4.4-ti"
+	#git_branch="4.4-ti"
+	#git_clone_branch
 
-	git_repo="https://github.com/RobertCNelson/dtb-rebuilder.git"
-	git_target_dir="/opt/source/dtb-4.9-ti"
-	git_branch="4.9-ti"
-	git_clone_branch
+	#git_repo="https://github.com/RobertCNelson/dtb-rebuilder.git"
+	#git_target_dir="/opt/source/dtb-4.9-ti"
+	#git_branch="4.9-ti"
+	#git_clone_branch
 
 	git_repo="https://github.com/ppoile/bb.org-overlays"
 	git_target_dir="/opt/source/bb.org-overlays"
