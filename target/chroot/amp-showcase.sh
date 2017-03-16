@@ -340,6 +340,7 @@ install_git_repos () {
 	git_clone_full
 
 	cd ${git_target_dir}/
+	git checkout SpeckRefactor
 	make
 	cp ./gen/pru-farbsort.out /lib/firmware/am335x-pru0-fw
 
