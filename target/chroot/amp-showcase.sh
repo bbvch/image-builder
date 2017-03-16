@@ -343,6 +343,7 @@ install_git_repos () {
 	git checkout SpeckRefactor
 	make --makefile=Makefile.pru
 	cp ./gen/pru-farbsort.out /lib/firmware/am335x-pru0-fw
+	update-initramfs -u -k ${repo_rcnee_pkg_version}
 
 	git_repo="https://github.com/bbvch/farbsort-websocket"
 	git_target_dir="/opt/source/farbsort-websocket"
