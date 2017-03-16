@@ -348,6 +348,10 @@ install_git_repos () {
 	git_repo="https://github.com/bbvch/farbsort-websocket"
 	git_target_dir="/opt/source/farbsort-websocket"
 	git_clone_full
+
+	cd ${git_target_dir}/
+	make install
+	systemctl enable farbsort-websocket.service
 }
 
 install_build_pkgs () {
