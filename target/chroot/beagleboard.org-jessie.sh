@@ -308,7 +308,7 @@ install_git_repos () {
 	fi
 
        #bbvch
-       git_repo="https://github.com/ppoile/pru-software-support-package"
+       git_repo="https://github.com/bbvch/pru-software-support-package"
        git_target_dir="/opt/source/pru-software-support-package"
        git_clone_full
 
