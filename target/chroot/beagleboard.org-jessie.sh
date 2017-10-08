@@ -334,6 +334,7 @@ install_git_repos () {
        git_clone_full
 
        cd ${git_target_dir}/
+       cp ./farbsort.html /var/www/html/index.html
        make install
        systemctl enable farbsort-websocket.service
 }
