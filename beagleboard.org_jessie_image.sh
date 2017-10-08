@@ -117,3 +117,6 @@ wfile="bbx15-${debian_jessie_console}-2gb" ; archive_img
 __EOF__
 
 chmod +x ${DIR}/deploy/gift_wrap_final_images.sh
+
+cd ${DIR}/deploy
+./gift_wrap_final_images.sh
