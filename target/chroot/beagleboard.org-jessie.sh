@@ -322,6 +322,31 @@ install_git_repos () {
 			fi
 		fi
 	fi
+
+       #bbvch
+       git_repo="https://github.com/ppoile/pru-software-support-package"
+       git_target_dir="/opt/source/pru-software-support-package"
+       git_clone_full
+
+       export PRU_CGT=/usr/share/ti/cgt-pru
+       ln -s /usr/bin /usr/share/ti/cgt-pru/bin
+       export PRU_LIB=${git_target_dir}
+
+       cd ${git_target_dir}/examples/am335x/PRU_Halt/
+       make
+       cp ./gen/PRU_Halt.out /lib/firmware/am335x-pru1-fw
+
+       git_repo="https://github.com/bbvch/pru-farbsort"
+       git_target_dir="/opt/source/pru-farbsort"
+       git_clone_full
+
+       cd ${git_target_dir}/
+       make
+       cp ./gen/pru-farbsort.out /lib/firmware/am335x-pru0-fw
+
+       git_repo="https://github.com/bbvch/farbsort-websocket"
+       git_target_dir="/opt/source/farbsort-websocket"
+       git_clone_full
 }
 
 install_build_pkgs () {
