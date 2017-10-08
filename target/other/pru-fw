@@ -1,0 +1,13 @@
+#!/bin/sh -e
+# Copy the PRU firmwares into the initramfs
+
+if [ "$1" = "prereqs" ]; then exit 0; fi
+
+. /usr/share/initramfs-tools/hook-functions
+
+unset check
+check=$(ls /lib/firmware/am335x-pru*-fw)
+if [ ! "x${check}" = "x" ] ; then
+    mkdir -p $DESTDIR/lib/firmware/
+    cp -a /lib/firmware/am335x-pru*-fw $DESTDIR/lib/firmware/
+fi
