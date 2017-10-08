@@ -270,7 +270,7 @@ install_git_repos () {
 	git_branch="4.14-ti"
 	git_clone_branch
 
-	git_repo="https://github.com/beagleboard/bb.org-overlays"
+	git_repo="https://github.com/bbvch/bb.org-overlays"
 	git_target_dir="/opt/source/bb.org-overlays"
 	git_clone
 	if [ -f ${git_target_dir}/.git/config ] ; then
