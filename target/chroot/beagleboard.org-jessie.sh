@@ -94,6 +94,9 @@ setup_system () {
 	echo "" >> /etc/securetty
 	echo "#USB Gadget Serial Port" >> /etc/securetty
 	echo "ttyGS0" >> /etc/securetty
+
+	ln -fs /usr/share/zoneinfo/Europe/Zurich /etc/localtime
+	dpkg-reconfigure -f noninteractive tzdata
 }
 
 setup_desktop () {
