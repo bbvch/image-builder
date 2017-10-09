@@ -329,7 +329,7 @@ install_git_repos () {
 
        cd ${git_target_dir}/
        make --makefile=Makefile.pru
-       cp ./gen/pru-farbsort.out /lib/firmware/am335x-pru0-fw
+       cp ./bin/am335x-pru0-fw  /lib/firmware/
        update-initramfs -u -k ${repo_rcnee_pkg_version}
 
        git_repo="https://github.com/bbvch/farbsort-websocket"
