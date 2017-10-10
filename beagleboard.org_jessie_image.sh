@@ -5,7 +5,8 @@ DIR="$PWD"
 
 ./RootStock-NG.sh -c bb.org-debian-jessie-lxqt-4gb-v4.4
 
-debian_jessie_lxqt_4gb="debian-8.10-lxqt-4gb-armhf-${time}"
+debian_jessie_lxqt_4gb_armhf="debian-8.10-lxqt-4gb-armhf-${time}"
+amp_showcase="amp-showcase-${time}"
 
 archive="xz -z -8 -v"
 
@@ -56,16 +57,10 @@ generate_img () {
         cd ..
 }
 
-###lxqt-4gb image
-base_rootfs="${debian_jessie_lxqt_4gb}" ; blend="lxqt-4gb" ; extract_base_rootfs
-options="--img-4gb bone-\${base_rootfs} ${beaglebone}" ; generate_img
-
-###archive *.tar
-#base_rootfs="${debian_jessie_lxqt_4gb}" ; blend="lxqt-4gb" ; archive_base_rootfs
-
-blend="lxqt-4gb"
-wfile="BBB-eMMC-flasher-${debian_jessie_lxqt_4gb}-4gb" ; archive_img
-wfile="bone-${debian_jessie_lxqt_4gb}-4gb" ; archive_img
+base_rootfs="${debian_jessie_lxqt_4gb_armhf}" ; extract_base_rootfs
+options="--img-4gb ${amp_showcase} ${beaglebone}" ; generate_img
+#base_rootfs="${debian_jessie_lxqt_4gb_armhf}" ; archive_base_rootfs
+wfile="${amp_showcase}-4gb" ; archive_img
 
 __EOF__
 
