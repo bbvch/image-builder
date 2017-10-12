@@ -1,9 +1,8 @@
 TODO
 ----
 
-1. rename image to amp-showcase_<time>_v4.4.img.xz
-2. switch to debian stretch
-3. setup farbsort-gui
-4. use linux kernel 4.9
-5. patch .bashrc
-6. apt-get autoremove
+1. switch to debian stretch
+2. setup farbsort-gui
+3. use linux kernel 4.9
+4. patch .bashrc
+5. apt-get autoremove
