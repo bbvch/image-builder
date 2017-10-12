@@ -3,9 +3,9 @@
 time=$(date +%Y-%m-%d)
 DIR="$PWD"
 
-./RootStock-NG.sh -c bb.org-debian-jessie-lxqt-4gb-v4.4
+./RootStock-NG.sh -c bb.org-debian-stretch-lxqt-v4.9
 
-debian_jessie_lxqt_4gb_armhf="debian-8.10-lxqt-4gb-armhf-${time}"
+debian_stretch_lxqt_armhf="debian-9.2-lxqt-armhf-${time}"
 amp_showcase="amp-showcase-${time}"
 
 archive="xz -z -8 -v"
@@ -57,9 +57,9 @@ generate_img () {
         cd ..
 }
 
-base_rootfs="${debian_jessie_lxqt_4gb_armhf}" ; extract_base_rootfs
+base_rootfs="${debian_stretch_lxqt_armhf}" ; extract_base_rootfs
 options="--img-4gb ${amp_showcase} ${beaglebone}" ; generate_img
-#base_rootfs="${debian_jessie_lxqt_4gb_armhf}" ; archive_base_rootfs
+#base_rootfs="${debian_stretch_lxqt_armhf}" ; archive_base_rootfs
 wfile="${amp_showcase}-4gb" ; archive_img
 
 __EOF__
