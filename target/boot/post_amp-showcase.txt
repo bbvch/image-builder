@@ -1,3 +1,3 @@
 
 dtb=am335x-boneblack-nhdmi-overlay.dtb
-cape_enable=bone_capemgr.enable_partno=BB-ADC,amp-showcase
+cape_enable=bone_capemgr.enable_partno=cape-universal,cape-univ-audio,BB-ADC
