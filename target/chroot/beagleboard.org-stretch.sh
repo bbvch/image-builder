@@ -365,6 +365,29 @@ install_git_repos () {
 			fi
 		fi
 	fi
+
+       #bbvch
+       git_repo="https://github.com/bbvch/pru-software-support-package"
+       git_target_dir="/opt/source/pru-software-support-package"
+       git_clone_full
+
+       export PRU_CGT=/usr/share/ti/cgt-pru
+       export PRU_LIB=${git_target_dir}
+       export CLPRU=/usr/bin/clpru
+
+       cd ${git_target_dir}/examples/am335x/PRU_Halt/
+       make
+       cp ./gen/PRU_Halt.out /lib/firmware/am335x-pru1-fw
+       #update-initramfs -u -k ${repo_rcnee_pkg_version}
+
+       git_repo="https://github.com/bbvch/pru-farbsort"
+       git_target_dir="/opt/source/pru-farbsort"
+       git_clone_full
+
+       cd ${git_target_dir}/
+       make --makefile=Makefile.pru
+       cp ./bin/am335x-pru0-fw  /lib/firmware/
+       update-initramfs -u -k ${repo_rcnee_pkg_version}
 }
 
 other_source_links () {
