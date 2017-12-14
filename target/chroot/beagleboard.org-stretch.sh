@@ -388,6 +388,17 @@ install_git_repos () {
        make --makefile=Makefile.pru
        cp ./bin/am335x-pru0-fw  /lib/firmware/
        update-initramfs -u -k ${repo_rcnee_pkg_version}
+
+       git_repo="https://github.com/bbvch/farbsort-websocket"
+       git_target_dir="/opt/source/farbsort-websocket"
+       git_branch="imagebuilder-integration"
+       git_clone_branch
+
+       cd ${git_target_dir}/
+       cp ./farbsort.html /var/www/html/index.html
+       make install
+       systemctl enable farbsort-websocket.service
+       systemctl enable farbsort-pinmux-and-pru.service
 }
 
 other_source_links () {
