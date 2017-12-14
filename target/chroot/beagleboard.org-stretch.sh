@@ -399,6 +399,12 @@ install_git_repos () {
        make install
        systemctl enable farbsort-websocket.service
        systemctl enable farbsort-pinmux-and-pru.service
+
+       git_repo="https://github.com/bbvch/farbsort-gui"
+       git_target_dir="/opt/source/farbsort-gui"
+       git_clone_full
+
+       cd ${git_target_dir}/
 }
 
 other_source_links () {
