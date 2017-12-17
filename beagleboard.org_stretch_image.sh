@@ -5,7 +5,7 @@ DIR="$PWD"
 
 ./RootStock-NG.sh -c bb.org-debian-stretch-lxqt-v4.9
 
-debian_stretch_lxqt_armhf="debian-9.2-lxqt-armhf-${time}"
+debian_stretch_lxqt_armhf="debian-9.3-lxqt-armhf-${time}"
 amp_showcase="amp-showcase-${time}"
 
 archive="xz -z -8 -v"
