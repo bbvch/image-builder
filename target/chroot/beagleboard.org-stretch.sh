@@ -374,6 +374,8 @@ install_git_repos () {
        export PRU_CGT=/usr/share/ti/cgt-pru
        export PRU_LIB=${git_target_dir}
        export CLPRU=/usr/bin/clpru
+       mkdir -p /usr/share/ti/cgt-pru/bin
+       ln -s ${CLPRU} /usr/share/ti/cgt-pru/bin/
 
        cd ${git_target_dir}/examples/am335x/PRU_Halt/
        make
